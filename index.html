@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md Shamsul Alam Shihab | Academic Portfolio & Writings</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            emeraldAccent: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+    }
+    .dark .glass-card {
+      background: rgba(24, 24, 27, 0.8);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body class="bg-zinc-50 text-zinc-800 dark:bg-zinc-950 dark:text-zinc-200 font-sans transition-colors duration-300">
+
+  <!-- ================= TOP STICKY NAVBAR ================= -->
+  <header class="sticky top-0 z-50 bg-white/90 dark:bg-zinc-950/90 backdrop-blur border-b border-zinc-200 dark:border-zinc-800">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white font-bold flex items-center justify-center font-serif text-lg shadow-sm">
+          SS
+        </div>
+        <div>
+          <h1 class="text-sm font-bold text-zinc-900 dark:text-white leading-tight">Md Shamsul Alam Shihab</h1>
+          <p class="text-xs text-zinc-500 dark:text-zinc-400">Sociology • University of Dhaka</p>
+        </div>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-6 text-xs font-semibold uppercase tracking-wider text-zinc-600 dark:text-zinc-300">
+        <a href="#about" class="hover:text-emerald-600 transition">About</a>
+        <a href="#education" class="hover:text-emerald-600 transition">Education</a>
+        <a href="#experience" class="hover:text-emerald-600 transition">Leadership</a>
+        <a href="#skills" class="hover:text-emerald-600 transition">Skills</a>
+        <a href="#awards" class="hover:text-emerald-600 transition">Awards & Certs</a>
+        <a href="#writings" class="hover:text-emerald-600 transition">Writings & Thoughts</a>
+        <a href="#contact" class="hover:text-emerald-600 transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" class="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition" aria-label="Toggle Theme">
+          <i data-lucide="sun" class="w-4 h-4 block dark:hidden"></i>
+          <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
+        </button>
+        <button id="menu-btn" class="p-2 text-zinc-700 dark:text-zinc-300 lg:hidden">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 py-3 space-y-2 text-sm font-medium">
+      <a href="#about" class="block py-1 hover:text-emerald-600">About</a>
+      <a href="#education" class="block py-1 hover:text-emerald-600">Education</a>
+      <a href="#experience" class="block py-1 hover:text-emerald-600">Leadership</a>
+      <a href="#skills" class="block py-1 hover:text-emerald-600">Skills</a>
+      <a href="#awards" class="block py-1 hover:text-emerald-600">Awards & Certs</a>
+      <a href="#writings" class="block py-1 hover:text-emerald-600">Writings & Thoughts</a>
+      <a href="#contact" class="block py-1 hover:text-emerald-600">Contact</a>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTAINER ================= -->
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-20">
+
+    <!-- HERO SECTION (Styled like syedtoushik.pages.dev) -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start pt-4">
+      <div class="lg:col-span-2 space-y-6">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+          <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-zinc-200 dark:bg-zinc-800 border-2 border-zinc-300 dark:border-zinc-700 overflow-hidden flex items-center justify-center shrink-0 shadow-md">
+            <!-- Replace with your uploaded profile image: <img src="profile.jpg" class="w-full h-full object-cover"> -->
+            <i data-lucide="user" class="w-14 h-14 text-zinc-400"></i>
+          </div>
+          <div class="space-y-1">
+            <span class="text-xs font-bold tracking-widest text-emerald-600 uppercase">Sociological Inquirer & Analyst</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold font-serif text-zinc-900 dark:text-white">
+              Hi, I'm Shihab 👋
+            </h1>
+            <h2 class="text-lg font-medium text-emerald-700 dark:text-emerald-400">
+              Exploring Algorithmic Literacy, Social Divides & Critical Thought
+            </h2>
+            <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed pt-1">
+              Undergraduate student in Sociology at the University of Dhaka. I leverage quantitative modeling (SPSS) alongside classical and critical social theories to evaluate technological appropriation and public discourse.
+            </p>
+          </div>
+        </div>
+
+        <!-- Action Links -->
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="#contact" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-xs sm:text-sm flex items-center gap-2 shadow-sm transition">
+            <i data-lucide="mail" class="w-4 h-4"></i> Get In Touch
+          </a>
+          <a href="CV.pdf" target="_blank" class="px-4 py-2 rounded-xl border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-900 font-medium text-xs sm:text-sm flex items-center gap-2 transition">
+            <i data-lucide="file-text" class="w-4 h-4"></i> Download CV
+          </a>
+          <a href="https://github.com" target="_blank" class="px-4 py-2 rounded-xl border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-900 font-medium text-xs sm:text-sm flex items-center gap-2 transition">
+            <i data-lucide="github" class="w-4 h-4"></i> GitHub
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="px-4 py-2 rounded-xl border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-900 font-medium text-xs sm:text-sm flex items-center gap-2 transition">
+            <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Contact Aside Card -->
+      <aside class="glass-card border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm space-y-4">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2">
+          <i data-lucide="map-pin" class="w-4 h-4 text-emerald-600"></i> Primary Info
+        </h3>
+        <div class="space-y-3 text-xs sm:text-sm">
+          <div>
+            <span class="text-zinc-400 block text-xs">Affiliation:</span>
+            <span class="font-medium text-zinc-800 dark:text-zinc-200">University of Dhaka</span>
+          </div>
+          <div>
+            <span class="text-zinc-400 block text-xs">Residence:</span>
+            <span class="font-medium text-zinc-800 dark:text-zinc-200">Kabi Jasimuddin Hall</span>
+          </div>
+          <div>
+            <span class="text-zinc-400 block text-xs">Email:</span>
+            <a href="mailto:contact@example.com" class="text-emerald-600 hover:underline font-medium">contact@example.com</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ================= ABOUT ME ================= -->
+    <section id="about" class="space-y-6">
+      <h3 class="text-2xl font-bold font-serif text-zinc-900 dark:text-white flex items-center gap-2">
+        <span>💫</span> About Me
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card border border-zinc-200 dark:border-zinc-800 p-6 rounded-2xl space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 flex items-center justify-center mb-3">
+            <i data-lucide="book-open" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-zinc-900 dark:text-white text-base">Sociological Research</h4>
+          <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            Investigating algorithmic literacy, Bourdieu's forms of capital, and Jan van Dijk's digital divide theories among contemporary students in South Asia.
+          </p>
+        </div>
+
+        <div class="glass-card border border-zinc-200 dark:border-zinc-800 p-6 rounded-2xl space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 flex items-center justify-center mb-3">
+            <i data-lucide="bar-chart-2" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-zinc-900 dark:text-white text-base">Quantitative Analysis</h4>
+          <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            Employing IBM SPSS Statistics for empirical social data analysis, survey design, regression modeling, and time-series evaluations.
+          </p>
+        </div>
+
+        <div class="glass-card border border-zinc-200 dark:border-zinc-800 p-6 rounded-2xl space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 flex items-center justify-center mb-3">
+            <i data-lucide="pen-tool" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-zinc-900 dark:text-white text-base">Discourse & Literature</h4>
+          <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            Cultivating critical socio-political discourse, literary essays, and editorial initiatives through platforms like <em>খসড়া</em>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section id="education" class="space-y-6">
+      <h3 class="text-2xl font-bold font-serif text-zinc-900 dark:text-white flex items-center gap-2">
+        <span>🎓</span> Education
+      </h3>
+      <div class="space-y-4">
+        <div class="glass-card border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-xl shrink-0">
+              🏛️
+            </div>
+            <div>
+              <h4 class="font-bold text-sm sm:text-base text-zinc-900 dark:text-white">University of Dhaka</h4>
+              <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">BSS (Hons.) in Sociology • Kabi Jasimuddin Hall</p>
+              <p class="text-xs text-zinc-400 mt-1">Coursework: Social Statistics, Classical & Modern Sociological Theories, Urban Sociology</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 shrink-0">
+            Current
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LEADERSHIP & EXPERIENCE ================= -->
+    <section id="experience" class="space-y-6">
+      <h3 class="text-2xl font-bold font-serif text-zinc-900 dark:text-white flex items-center gap-2">
+        <span>💼</span> Leadership & Experience
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="glass-card border border-zinc-200 dark:border-zinc-800 p-6 rounded-2xl space-y-2">
+          <div class="flex justify-between items-start">
+            <div>
+              <h4 class="font-bold text-sm sm:text-base text-zinc-900 dark:text-white">General Secretary</h4>
+              <p class="text-xs text-emerald-600 font-medium">Environment & Disaster Management Club</p>
+              <p class="text-xs text-zinc-400">Kabi Jasimuddin Hall, DU</p>
+            </div>
+            <span class="text-xs px-2.5 py-1 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-500 font-medium">2026 – Present</span>
+          </div>
+          <p class="text-xs text-zinc-600 dark:text-zinc-400 pt-2 leading-relaxed">
+            Directing student climate awareness initiatives, environmental preservation campaigns, and disaster readiness workshops inside the hall community.
+          </p>
+        </div>
+
+        <div class="glass-card border border-zinc-200 dark:border-zinc-800 p-6 rounded-2xl space-y-2">
+          <div class="flex justify-between items-start">
+            <div>
+              <h4 class="font-bold text-sm sm:text-base text-zinc-900 dark:text-white">Founder & Chief Editor</h4>
+              <p class="text-xs text-emerald-600 font-medium">খসড়া (Khoshra)</p>
+              <p class="text-xs text-zinc-400">Literature, Activism & Social Critique</p>
+            </div>
+            <span class="text-xs px-2.5 py-1 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-500 font-medium">2026 – Present</span>
+          </div>
+          <p class="text-xs text-zinc-600 dark:text-zinc-400 pt-2 leading-relaxed">
+            Curating and publishing critical prose, socio-political reflections, and independent essays under the motif <em>"অসমাপ্ত ভাবনায় প্রতিবাদের বয়ান"</em>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="space-y-6">
+      <h3 class="text-2xl font-bold font-serif text-zinc-900 dark:text-white flex items-center gap-2">
+        <span>🧰</span> Technical & Research Skills
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="glass-card border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-zinc-400">📊 Statistics & Data</h4>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 text-xs rounded-lg bg-zinc-100 dark:bg-zinc-800 font-medium">IBM SPSS</span>
+            <span class="px-2.5 py-1 text-xs rounded-lg bg-zinc-100 dark:bg-zinc-800 font-medium">Social Statistics</span>
+            <span class="px-2.5 py-1 text-xs rounded-lg bg-zinc-100 dark:bg-zinc-800 font-medium">Survey Sampling</span>
+            <span class="px-2.5 py-1 text-xs rounded-lg bg-zinc-100 dark:bg-zinc-800 font-medium">Quantitative Modeling</span>
+          </div>
+        </div>
+
+        <div class="glass-card border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-zinc-400">📝 Academic Writing</h4>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 text-xs rounded-lg bg-zinc-100 dark:bg-zinc-800 font-medium">LaTeX / Overleaf</span>
+            <span class="px-2.5 py-1 text-xs rounded-lg bg-zinc-100 dark:bg-zinc-800 font-medium">Zotero Reference</span>
+            <span class="px-2.5 py-1 text-xs rounded-lg bg-zinc-100 dark:bg-zinc-800 font-medium">Google Scholar</span>
+            <span class="px-2.5 py-1 text-xs rounded-lg bg-zinc-100 dark:bg-zinc-800 font-medium">ATS Formatting</span>
+          </div>
+        </div>
+
+        <div class="glass-card border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-zinc-400">🌐 Web & Digital</h4>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 text-xs rounded-lg bg-zinc-100 dark:bg-zinc-800 font-medium">HTML5</span>
+            <span class="px-2.5 py-1 text-xs rounded-lg bg-zinc-100 dark:bg-zinc-800 font-medium">Tailwind CSS</span>
+            <span class="px-2.5 py-1 text-xs rounded-lg bg-zinc-100 dark:bg-zinc-800 font-medium">Git / GitHub Pages</span>
+          </div>
+        </div>
+
+        <div class="glass-card border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-zinc-400">🗣️ Languages</h4>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 text-xs rounded-lg bg-zinc-100 dark:bg-zinc-800 font-medium">Bengali (Native)</span>
+            <span class="px-2.5 py-1 text-xs rounded-lg bg-zinc-100 dark:bg-zinc-800 font-medium">English (Proficient)</span>
+            <span class="px-2.5 py-1 text-xs rounded-lg bg-zinc-100 dark:bg-zinc-800 font-medium">Arabic (Reading/Typing)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AWARDS & CERTIFICATES (With Zoom Modal) ================= -->
+    <section id="awards" class="space-y-6">
+      <div class="flex items-center justify-between">
+        <h3 class="text-2xl font-bold font-serif text-zinc-900 dark:text-white flex items-center gap-2">
+          <span>🏆</span> Honors & Verified Certificates
+        </h3>
+        <span class="text-xs text-zinc-400">Click any card to inspect</span>
+      </div>
+
+      <!-- Certificate Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="certificate-container">
+        <!-- Rendered from certList array below -->
+      </div>
+    </section>
+
+    <!-- ================= WRITINGS & DAILY THOUGHTS ================= -->
+    <section id="writings" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-4">
+        <div>
+          <h3 class="text-2xl font-bold font-serif text-zinc-900 dark:text-white flex items-center gap-2">
+            <span>✍️</span> Writings, Musings & Thoughts
+          </h3>
+          <p class="text-xs text-zinc-500 dark:text-zinc-400">My regular stream of observations, critical essays, and reading notes</p>
+        </div>
+        <div class="flex gap-2">
+          <button onclick="filterWritings('all')" id="btn-all" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white transition">All Entries</button>
+          <button onclick="filterWritings('thought')" id="btn-thought" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 transition">Thoughts</button>
+          <button onclick="filterWritings('essay')" id="btn-essay" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 transition">Essays</button>
+        </div>
+      </div>
+
+      <div class="space-y-4" id="writings-container">
+        <!-- Rendered dynamically from writingsList array below -->
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="max-w-2xl mx-auto space-y-6 pt-6">
+      <div class="text-center space-y-2">
+        <h3 class="text-3xl font-serif font-bold text-zinc-900 dark:text-white">📧 Get In Touch</h3>
+        <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">Feel free to reach out for research collaboration, academic exchange, or questions.</p>
+      </div>
+
+      <form action="https://api.web3forms.com/submit" method="POST" class="glass-card border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 rounded-3xl space-y-4 shadow-sm">
+        <!-- Paste your free Web3Forms access key here if desired -->
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-1">Your Name</label>
+            <input type="text" name="name" required class="w-full px-4 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-sm focus:ring-2 focus:ring-emerald-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-1">Your Email</label>
+            <input type="email" name="email" required class="w-full px-4 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-sm focus:ring-2 focus:ring-emerald-500 outline-none">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-1">Message</label>
+          <textarea name="message" rows="4" required class="w-full px-4 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-sm focus:ring-2 focus:ring-emerald-500 outline-none"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm transition">
+          Send Message
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-zinc-200 dark:border-zinc-800 mt-24 py-8 text-center text-xs text-zinc-500">
+    <p>© <span id="year"></span> Md Shamsul Alam Shihab. Built with zero dependencies and hosted free on GitHub Pages.</p>
+  </footer>
+
+  <!-- ================= CERTIFICATE PREVIEW MODAL ================= -->
+  <div id="image-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="relative max-w-3xl w-full bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden shadow-2xl p-4">
+      <button onclick="closeModal()" class="absolute top-4 right-4 p-2 bg-zinc-200 dark:bg-zinc-800 rounded-full text-zinc-700 dark:text-zinc-300 hover:bg-zinc-300">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <img id="modal-img" src="" alt="Certificate" class="w-full max-h-[75vh] object-contain rounded-lg">
+      <h4 id="modal-title" class="mt-4 font-bold text-center text-sm sm:text-base text-zinc-900 dark:text-white"></h4>
+    </div>
+  </div>
+
+  <!-- ================= EDITABLE DATA REPOSITORY ================= -->
+  <script>
+    // -------------------------------------------------------------
+    // ✏️ EASILY EDIT YOUR WEBSITE HERE:
+    // Simply add or modify entries inside these arrays!
+    // -------------------------------------------------------------
+
+    // 1. CERTIFICATES & AWARDS
+    const certList = [
+      {
+        title: "Quantitative Social Statistics & SPSS Modeling",
+        issuer: "Social Statistics Academic Module",
+        date: "2026",
+        img: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        title: "LaTeX & Technical Academic Typesetting",
+        issuer: "Overleaf Research Workshop",
+        date: "2026",
+        img: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        title: "General Secretary Leadership Appointment",
+        issuer: "Environment & Disaster Management Club (Kabi Jasimuddin Hall)",
+        date: "2026",
+        img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80"
+      }
+    ];
+
+    // 2. DAILY THOUGHTS & WRITINGS
+    const writingsList = [
+      {
+        type: "thought",
+        category: "Sociology & AI",
+        date: "Oct 20, 2026",
+        title: "Algorithmic Capital & The Digital Divide",
+        body: "Access to generative tools alone doesn't resolve inequality. Algorithmic literacy—knowing how to interrogate and prompt synthetic models—is emerging as the new form of cultural capital.",
+        link: null
+      },
+      {
+        type: "essay",
+        category: "Critical Prose",
+        date: "October 2026",
+        title: "অসমাপ্ত ভাবনায় প্রতিবাদের বয়ান",
+        body: "An exploration of literature as public resistance, examining collective consciousness, intellectual responsibility, and social critique in contemporary Bengal.",
+        link: "https://facebook.com"
+      },
+      {
+        type: "thought",
+        category: "Literature",
+        date: "Sep 28, 2026",
+        title: "Motahar Hossain Chowdhury on Culture",
+        body: "Re-reading 'জীবন ও বৃক্ষ': survival is merely biological; culture is deliberate cultivation. Are our digital universities fostering cultivation, or just rapid information consumption?",
+        link: null
+      }
+    ];
+
+    // -------------------------------------------------------------
+    // ENGINE CODE: RENDERING & INTERACTIONS
+    // -------------------------------------------------------------
+    function renderSite() {
+      // Render Certificates
+      const certContainer = document.getElementById('certificate-container');
+      certContainer.innerHTML = certList.map((item, index) => `
+        <div onclick="openModal('${item.img}', '${item.title}')" class="glass-card border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition cursor-pointer group shadow-sm flex flex-col justify-between">
+          <div class="h-44 bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+            <img src="${item.img}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          </div>
+          <div class="p-4 space-y-1">
+            <span class="text-xs text-zinc-400">${item.date}</span>
+            <h4 class="font-bold text-sm text-zinc-900 dark:text-white leading-tight group-hover:text-emerald-600 transition">${item.title}</h4>
+            <p class="text-xs text-zinc-500">${item.issuer}</p>
+          </div>
+        </div>
+      `).join('');
+
+      renderWritings('all');
+      lucide.createIcons();
+    }
+
+    function renderWritings(filter) {
+      const container = document.getElementById('writings-container');
+      const filtered = filter === 'all' ? writingsList : writingsList.filter(w => w.type === filter);
+      
+      container.innerHTML = filtered.map(item => `
+        <article class="glass-card border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl space-y-2 hover:border-zinc-300 dark:hover:border-zinc-700 transition">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-semibold text-emerald-600 uppercase tracking-wider">${item.category} • ${item.type.toUpperCase()}</span>
+            <time class="text-zinc-400">${item.date}</time>
+          </div>
+          <h4 class="font-bold text-base text-zinc-900 dark:text-white">${item.title}</h4>
+          <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">${item.body}</p>
+          ${item.link ? `<a href="${item.link}" target="_blank" class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-600 hover:underline pt-2">Read Full Essay <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a>` : ''}
+        </article>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function filterWritings(type) {
+      ['all', 'thought', 'essay'].forEach(t => {
+        const btn = document.getElementById(`btn-${t}`);
+        if (t === type) {
+          btn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white transition";
+        } else {
+          btn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 transition";
+        }
+      });
+      renderWritings(type);
+    }
+
+    // Modal logic
+    function openModal(img, title) {
+      document.getElementById('modal-img').src = img;
+      document.getElementById('modal-title').textContent = title;
+      const modal = document.getElementById('image-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('image-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Theme logic
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.addEventListener('click', () => {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+    });
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+
+    // Mobile nav toggle
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    window.addEventListener('DOMContentLoaded', renderSite);
+  </script>
+</body>
+</html>
